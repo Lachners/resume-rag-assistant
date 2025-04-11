@@ -1,17 +1,15 @@
 import psycopg2
+from config.settings import DB_CONFIG
 
-conn = psycopg2.connect(
-    dbname="jobs",
-    user="seblach",
-    password="localhost123",
-    host="localhost",
-)
+def get_connection():
+    return psycopg2.connect(**DB_CONFIG)
+# This function establishes a connection to the PostgreSQL database using the provided configuration settings.
 
-cur = conn.cursor() # This is a cursor object that allows you to execute SQL queries and fetch results from the database.
+def fetch_job_descriptions():
+    with get_connection() as conn:
+        with conn.cursor() as curs:
+            curs.execute(""" SELECT id, title, description FROM dataset
+                         WHERE description IS NOT NULL """, (10000,))
+            
+            return curs.fetchall()
 
-cur.execute("SELECT COUNT(*) FROM dataset;") # This executes a SQL query to select all rows from the "database" table.
-count = cur.fetchone()[0] # This fetches the first row of the result set and gets the first column (the count of rows)
-print(f"Number of rows in the dataset: {count}") # This prints the count of rows in the dataset.
-
-cur.close()
-conn.close() # This closes the cursor and the database connection.
