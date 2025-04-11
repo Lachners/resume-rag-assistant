@@ -1,7 +1,7 @@
 DB_CONFIG = {
     "dbname": "jobs",
-    "user":"seblach",
-    "password":"localhost123",
+    "user":name,
+    "password":password,
     "host":"localhost",
     "port": 5432,
 }
