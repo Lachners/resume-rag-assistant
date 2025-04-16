@@ -1,5 +1,5 @@
 from app.resume_parser import extract_text_from_pdf
-from app.vector_space import embed_text, search_similar
+from app.vector_store import embed_text, search_similar
 from app.rag_agent import generate_resume_feedback
 import pickle
 import faiss
