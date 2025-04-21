@@ -1,0 +1,9 @@
+psycopg2-binary
+pandas
+sentence-transformers
+faiss-cpu
+pdfminer.six
+ollama
+streamlit
+keybert
+python-dotenv
