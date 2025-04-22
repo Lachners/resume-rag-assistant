@@ -71,6 +71,7 @@ It then provides AI-generated feedback about how well the resume aligns with spe
    ```
 
    > Note: `all-mpnet-base-v2` is pulled automatically when needed by `sentence-transformers`.
+   
    > Warning: `deepseek-r1:7b` and `bespoke-minicheck:7b` require each 4.7GB free disk space and can get computionally intensive. Change the Language Models according to your possibilities if needed.
 
 4. **Run the App**:
