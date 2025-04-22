@@ -64,6 +64,14 @@ It then provides AI-generated feedback about how well the resume aligns with spe
    pip install -r requirements.txt
    ```
 
+3. **Create .env file and paste this settings (default)**:
+   ```
+   OLLAMA_API_URL= "http://localhost:11434"
+    DEEPSEEK_MODEL=deepseek-r1:7b
+    EMBED_MODEL=all-mpnet-base-v2
+    CHECK_MODEL=bespoke-minicheck:7b
+   ```
+
 3. **Pull the Ollama LLMs**:
    ```bash
    ollama pull deepseek-r1:7b
@@ -72,7 +80,7 @@ It then provides AI-generated feedback about how well the resume aligns with spe
 
    > Note: `all-mpnet-base-v2` is pulled automatically when needed by `sentence-transformers`.
    
-   > Warning: `deepseek-r1:7b` and `bespoke-minicheck:7b` require each 4.7GB free disk space and can get computionally intensive. Change the Language Models according to your possibilities if needed.
+   > Warning: `deepseek-r1:7b` and `bespoke-minicheck:7b` require each 4.7GB free disk space and can get computionally intensive. Change the Language Models according to your possibilities in .env if needed.
 
 4. **Run the App**:
    ```bash
