@@ -51,18 +51,31 @@ It then provides AI-generated feedback about how well the resume aligns with spe
 ---
 
 
-
-Local Setup:
+## Local Setup:
 
 1. **Clone the Repo**:
-2. Install dependencies:
-   "pip install -r requirements.txt"
+   ```bash
+   git clone https://github.com/your-username/resume-feedback-rag.git
+   cd resume-feedback-rag
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
 3. **Pull the Ollama LLMs**:
-   "ollama pull deepseek-r1:7b"
-   "ollama pull bespoke-minicheck:7b"
-   Note: `all-mpnet-base-v2` is pulled automatically when needed by `sentence-transformers`
-5. **Run the App**:
-   "streamlit run streamlit_app.py"
+   ```bash
+   ollama pull deepseek-r1:7b
+   ollama pull bespoke-minicheck:7b
+   ```
+
+   > Note: `all-mpnet-base-v2` is pulled automatically when needed by `sentence-transformers`.
+
+4. **Run the App**:
+   ```bash
+   streamlit run streamlit_app.py
+   ```
 
 
 
