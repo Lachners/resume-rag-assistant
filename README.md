@@ -66,7 +66,7 @@ It then provides AI-generated feedback about how well the resume aligns with spe
 
 3. **Create .env file and paste this settings (default)**:
    ```
-   OLLAMA_API_URL= "http://localhost:11434"
+   OLLAMA_API_URL= localhost
     DEEPSEEK_MODEL=deepseek-r1:7b
     EMBED_MODEL=all-mpnet-base-v2
     CHECK_MODEL=bespoke-minicheck:7b
@@ -86,6 +86,7 @@ It then provides AI-generated feedback about how well the resume aligns with spe
    ```bash
    streamlit run streamlit_app.py
    ```
+
 
 
 
